@@ -1,370 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--
+    THIS SITE WAS DEVELOPED USING MATERIAL KIT PRO FROM CREATIVETIM.COM.
+    THE PRO KIT IS LICENSED FOR USE TO THE PURCHASER I.E. NIKETAN GULEKAR. 
+    ANY USE OF FILES IN THE REPOSITORY WILL RESULT IN COPYRIGHT ACTIONS.     
+-->
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niketan Gulekar</title>
-    <script src="assets/js/core/typewriterjs.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Niketan Gulekar
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <script src="/assets/js/core/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="assets/js/core/email.min.js">
-    </script>
-    <link href="assets/css/aos.css" rel="stylesheet">
-    <script src="assets/js/core/aos.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script>
-        const projects_list = [
-                {
-                    "title": "TechnoFest 2k20 Registration Website",
-                    "desc": "A Registration Website for online registration of TechnoFest 2K20, conducted by COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online Payments.",
-                    "github": "https://github.com/NiketanG/COMeIT_RegistrationApp",
-                    "link": "https://bit.ly/technofest2k20",
-                    "category": "default"
-                },
-                {
-                    "title": "Online Quiz",
-                    "desc": "A Quiz System with customisable no. of subjects and questions, random questions for each user, Sessions for tracking attempted quiestions and a leaderboard to view score. Built originally for TechnoFest 2k20.",
-                    "github": "https://github.com/NiketanG/TF_Quiz",
-                    "link": "http://bit.ly/tf-quiz",
-                    "category": "default"
-                },
-                {
-                    "title": "1TapHelp",
-                    "desc": "Disaster Management System developed as a Project for Smart India Hackathon. [ PRIVATE ]",
-                    "category": "default"
-                },
-                {
-                    "title": "Online 2 Player Stone-Paper-Scissor",
-                    "desc": "Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
-                    "github": "https://github.com/NiketanG/stone-paper-scissor-online",
-                    "link": "https://bit.ly/stone-paper-scissor",
-                    "category": "personal"
-                },
-                {
-                    "title": "Online 2 Player Tic-Tac-Toe",
-                    "desc": "Online, Tic-Tac-Toe Game that is playable over the internet, between 2 players.",
-                    "github": "https://github.com/NiketanG/tic-tac-toe-online",
-                    "link": "https://bit.ly/tic-tac-toe-online",
-                    "category": "personal"
-                }
-            ]
-        $(function () {
-            emailjs.init("user_YBW1M72fAfvymWrDJTDrT");
-            AOS.init();
+    <!-- CSS Files -->
+    <link href="/assets/css/material-kit.min.css?v=2.2.0" rel="stylesheet" />
 
-            $('#contactForm').on('submit', function (e) {
-                e.preventDefault();
-                var name = $("#contactForm input")[0].value;
-                var email = $("#contactForm input")[1].value;
-                var message = $("#contactForm textarea")[0].value;
-                var templateParams = {
-                    from_name: name,
-                    from_email: email,
-                    message_html: message
-                };
-
-                emailjs.send('gmail', 'template_06EQuuhx', templateParams)
-                    .then(function (response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        $("#messageSubmit").html('<i class="fa fa-check" aria-hidden="true"></i>Sent')
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                        $("#messageSubmit").html('<i class="fa fa-times" aria-hidden="true"></i>Failed')
-                    });
-            });
-            
-            projects_list.forEach(element => {
-                    $(".projects .content ."+element.category+" .row").append(
-                        '<div class="card" data-aos="fade-down"><h3>'+element.title+'</h3><p>'+element.desc+'</p><div class="links">' + (element.github === undefined ? "" : '<a href="'+element.github+'" class="links" target="_blank"><i class="fa fa-github icon"></i></a>') + (element.link === undefined ? "" : '<a href="'+element.link+'" class="links" target="_blank"><i class="fa fa-globe icon"></i></a></div></div>')
-                    )
-            });
-            
-        });
-    </script>
 </head>
 
-<body>
-    <div class="section profile" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-out">
-        <div class="content">
-            <img class="profile" src="../assets/img/profile.jpg" alt="Profile Picture" />
-            <h1 id="title">Niketan Gulekar</h1>
-            <div class="typewriterContainer">
-                <h2 id="textTypeWriter"></h2>
+<body class="profile-page sidebar-collapse">
+    <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100"
+        id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit-pro/index.html">
+                    Niketan Gulekar </a>
             </div>
-            <a href="https://github.com/NiketanG" class="links" target="_blank">
-                <i class="fa fa-github icon"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/niketan-gulekar-774415172/" class="links" target="_blank">
-                <i class="fa fa-linkedin icon"></i>
-            </a>
-            <a href="https://twitter.com/OyeNikketan" class="links" target="_blank">
-                <i class="fa fa-twitter icon"></i>
-            </a>
-            <a href="https://instagram.com/nikketan" class="links" target="_blank">
-                <i class="fa fa-instagram icon"></i>
-            </a>
-        </div>
-        <p class="down">Scroll Down</p>
-    </div>
 
-    <div class="section about">
-        <div class="content" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out">
-            <h1>ABOUT ME</h1>
-            <p>Heyyy!</p>
-            <p>
-                I'm Niketan Gulekar, and as you might have already read, I'm a student, developer - web-developer for
-                the most part. But I can code other things as well.
-            </p>
-            <p>
-                With most interest in Full-Stack Web Development, I am proficient in Python. I use Flask Micro-Framework
-                for the most part in buiidlig the backend. But .NET, oh and PHP are some of the other things I can code
-                in.
-            </p>
-            <p>
-                For Front-End, I started out with plain HTML and CSS. Although it was more than enough for a 19 year
-                teenager, I know ReactJS as well.
-            </p>
-            <p>
-                Apart from Web-Development, I know Android, Java, C, C++, and of course SQL for them databases.
-            </p>
-            <p>
-                This website is just an example of one of the things I can do. Don't judge me based on this, and my
-                writing though, this is probably my shoddiest work, as of now atleast.
-            </p>
         </div>
-        <!-- <p class="down">Scroll Down</p> -->
-    </div>
-
-    <div class="section skills">
-        <div class="content" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-out">
-            <h1>SKILLS</h1>
+    </nav>
+    <div class="page-header header-filter" data-parallax="true"
+        style="background-image: url('../assets/img/city-profile.jpg');"></div>
+    <div class="main main-raised">
+        <div class="profile-content">
             <div class="container">
                 <div class="row">
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/python.png" alt="Python">
-                        <div class="card_text">
-                            <h3>Web Design and Development</h3>
-                            <p>HTML, CSS and Javascript</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/React-icon.svg" alt="Python">
-                        <div class="card_text">
-                            <h3>Frontend Javascript Frameworks</h3>
-                            <p>ReactJS</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/web-server.png" alt="Python">
-                        <div class="card_text">
-                            <h3>Backend Development</h3>
-                            <p>Python - Flask, PHP, .NET</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/firebase.webp" alt="Python">
-                        <div class="card_text">
-                            <h3>Cross Platform Services</h3>
-                            <p>Firebase</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/database.png" alt="Python">
-                        <div class="card_text">
-                            <h3>Database Management Systems</h3>
-                            <p>MySQL, Postgres, Oracle</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/android.png" alt="Python">
-                        <div class="card_text">
-                            <h3>Android App Development</h3>
-                            <p>Android Studio, Java</p>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up">
-                        <img src="/assets/img/coding.png" alt="Python">
-                        <div class="card_text">
-                            <h3>Other Languages</h3>
-                            <p>Python 3, C, C++, Java, BASH</p>
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="../assets/img/profile.jpg" alt="Circle Image"
+                                    class="img-raised rounded-circle img-fluid">
+                            </div>
+                            <div class="name">
+                                <h3 class="title">Niketan Gulekar</h3>
+                                <h6>Nerd, Geek, Student<br>Full-Stack Web Developer</h6>
+
+                                <h5>Languages</h5>
+                                <span class="badge badge-primary">C</span>
+                                <span class="badge badge-info">C++</span>
+                                <span class="badge badge-success">JavaScript</span>
+                                <span class="badge badge-primary">Python</span>
+                                <br>
+                                <span class="badge badge-primary">SQL</span>
+                                <span class="badge badge-info">HTML</span>
+                                <span class="badge badge-success">CSS</span>
+
+                                <br><br>
+
+                                <a href="https://github.com/NiketanG" target="_blank"
+                                    class="btn btn-just-icon btn-link btn-github"><i class="fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/niketan-gulekar-774415172/" target="_blank"
+                                    class="btn btn-just-icon btn-link btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://twitter.com/OyeNikketan" target="_blank"
+                                    class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://instagram.com/nikketan" target="_blank"
+                                    class="btn btn-just-icon btn-link btn-instagram"><i class="fa fa-instagram"></i></a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- <p class="down">Scroll Down</p> -->
-    </div>
-
-
-    <div class="section projects">
-        <div class="content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>PROJECTS</h1>
-            <div class="container default">
+                <div class="description text-center">
+                    <p>Powered by VS Code and Coffee.</p>
+                </div>
                 <div class="row">
-                   
-                </div>
-            </div>
-            <br>
-            <h3>Personal Projects</h3>
-            <div class="container personal">
-                <div class="row">
-                   
-                </div>
-            </div>
-        </div>
-        <!-- <p class="down">Scroll Down</p> -->
-    </div>
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile-tabs">
+                            <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#projects" role="tab" data-toggle="tab">
+                                        <i class="material-icons">code</i>
+                                        Projects
+                                    </a>
+                                </li>
 
-    <div class="section achievements certifications">
-        <div class="content" data-aos="fade-in" data-aos-duration="1000">
-            <h1>ACHIEVEMENTS</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="card" data-aos="fade-in">
-                        <h3>GCOEJ Hackathon 1.0</h3>
-                        <p>Winner : 4-5 March 2019</p>
-                    </div>
-                    <div class="card" data-aos="fade-in">
-                        <h3>Smart India Hackathon Grand Finale</h3>
-                        <p>Finalist : Finale Date TBD</p>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#achievements" role="tab" data-toggle="tab">
+                                        <i class="material-icons">star</i>
+                                        Achievements
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <div class="tab-content tab-space">
+                    <div class="tab-pane active text-center gallery" id="projects">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header card-header-icon card-header-info">
+                                        <div class="card-text">
+                                            <h4 class="card-title">Online Quiz</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        A Quiz System with customisable no. of subjects and questions,
+                                        random questions for each user, Sessions for tracking attempted quiestions and a
+                                        leaderboard to view score.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header card-header-text card-header-danger">
+                                        <div class="card-text">
+                                            <h4 class="card-title">COMeIT Registration Website</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        A Registration Website for online registration of TechnoFest 2K20, conducted by
+                                        COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online
+                                        Payments.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header card-header-text card-header-primary">
+                                        <div class="card-text">
+                                            <h4 class="card-title">1TapHelp</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        Disaster Management System developed as a Project for Smart India Hackathon.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane text-left gallery" id="achievements">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body ">
+                                    <h6 class="card-category text-danger">
+                                        WINNER
+                                    </h6>
+                                    <h4 class="card-title">
+                                        GCOEJ Hackathon 1.0
+                                    </h4>
+                                </div>
+                                <div class="card-footer ">
+                                    <span>4-5 March 2019</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body ">
+                                    <h6 class="card-category text-danger">
+                                        Selected
+                                    </h6>
+                                    <h4 class="card-title">
+                                        Smart India Hackathon Grand Finale Finalist
+                                    </h4>
+                                </div>
+                                <div class="card-footer ">
+                                    <span>4-5 April 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- <p class="down">Scroll Down</p> -->
     </div>
 
-    <div class="section contact">
-        <div class="content">
-            <h1>CONTACT</h1>
-            <form action="/" method="post" id="contactForm">
-                <div class="name" data-aos="fade-up">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Severus Snape" required>
-                </div>
-                <div class="email" data-aos="fade-up">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Severus@hogwarts.edu" required>
-                </div>
-                <div class="message" data-aos="fade-up">
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" rows="5" placeholder="I am the Half-Blood Prince."
-                        required></textarea>
-                </div>
-                <button type="submit" id="messageSubmit" data-aos="fade-up">
-                    <i class="fa fa-paper-plane" aria-hidden="true"></i>Send
-                </button>
-            </form>
+    <br><br>
+    <footer class="footer footer-black">
+        <div class="container">
+            <a class="footer-brand">Niketan Gulekar</a>
+            <div class="copyright float-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, all rights reserved.
+            </div>
         </div>
-        <!-- <p class="down">Scroll Down</p> -->
-    </div>
-
-    <div class="section end" data-aos="fade-up" data-aos-duration="1000">
-        <p id="up">Scroll Up</p>
-        <div class="content">
-            <h1>ABOUT</h1>
-            <p>Copyright 2020 Niketan Gulekar.</p>
-            <p>Licensed under MIT.</p>
-            <p>Made with <i class="fa fa-heart"></i> in India.</p>
-            <a href="https://github.com/NiketanG/niketang.github.io">Source Code</a>
-        </div>
-    </div>
-
-    <script>
-        var title = document.getElementById('textTypeWriter');
-        var typewriter = new Typewriter(title, {
-            loop: true,
-            delay: 80,
-        });
-
-        typewriter
-            .typeString('<strong>Student</strong>')
-            .pauseFor(500)
-            .deleteAll()
-            .typeString('<strong>Programmer</strong>')
-            .pauseFor(500)
-            .deleteChars(10)
-            .typeString('<strong>Web Designer</strong>')
-            .pauseFor(500)
-            .deleteChars(8)
-            .typeString('<strong>Developer</strong>')
-            .pauseFor(500)
-            .deleteAll()
-            .pauseFor(500)
-            .start();
+    </footer>
 
 
-        var about = $(".about .content h1")[0];
-        var typewriter2 = new Typewriter(about, {
-            loop: true,
-        });
-
-        typewriter2
-            .typeString('ABOUT ME')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-
-        var skills = $(".skills .content h1")[0];
-        var typewriter3 = new Typewriter(skills, {
-            loop: true,
-        });
-
-        typewriter3
-            .typeString('SKILLS')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-
-
-        var projects = $(".projects .content h1")[0];
-        var typewriter4 = new Typewriter(projects, {
-            loop: true,
-        });
-
-        typewriter4
-            .typeString('PROJECTS')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-
-        var achievements = $(".achievements .content h1")[0];
-        var typewriter5 = new Typewriter(achievements, {
-            loop: true,
-        });
-
-        typewriter5
-            .typeString('ACHIEVEMENTS')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-
-        var contact = $(".contact .content h1")[0];
-        var typewriter6 = new Typewriter(contact, {
-            loop: true,
-        });
-
-        typewriter6
-            .typeString('CONTACT')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-
-        var end = $(".end .content h1")[0];
-        var typewriter7 = new Typewriter(end, {
-            loop: true,
-        });
-
-        typewriter7
-            .typeString('ABOUT')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-    </script>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/material-kit.js?v=2.2.0" type="text/javascript"></script>
 </body>
 
 </html>
