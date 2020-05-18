@@ -18,40 +18,40 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script>
         const projects_list = [
-                {
-                    "title": "TechnoFest 2k20 Registration Website",
-                    "desc": "A Registration Website for online registration of TechnoFest 2K20, conducted by COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online Payments.",
-                    "github": "https://github.com/NiketanG/COMeIT_RegistrationApp",
-                    "link": "https://bit.ly/technofest2k20",
-                    "category": "default"
-                },
-                {
-                    "title": "Online Quiz",
-                    "desc": "A Quiz System with customisable no. of subjects and questions, random questions for each user, Sessions for tracking attempted quiestions and a leaderboard to view score. Built originally for TechnoFest 2k20.",
-                    "github": "https://github.com/NiketanG/TF_Quiz",
-                    "link": "http://bit.ly/tf-quiz",
-                    "category": "default"
-                },
-                {
-                    "title": "1TapHelp",
-                    "desc": "Disaster Management System developed as a Project for Smart India Hackathon. [ PRIVATE ]",
-                    "category": "default"
-                },
-                {
-                    "title": "Online 2 Player Stone-Paper-Scissor",
-                    "desc": "Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
-                    "github": "https://github.com/NiketanG/stone-paper-scissor-online",
-                    "link": "https://bit.ly/stone-paper-scissor",
-                    "category": "personal"
-                },
-                {
-                    "title": "Online 2 Player Tic-Tac-Toe",
-                    "desc": "Online, Tic-Tac-Toe Game that is playable over the internet, between 2 players.",
-                    "github": "https://github.com/NiketanG/tic-tac-toe-online",
-                    "link": "https://bit.ly/tic-tac-toe-online",
-                    "category": "personal"
-                }
-            ]
+            {
+                "title": "TechnoFest 2k20 Registration Website",
+                "desc": "A Registration Website for online registration of TechnoFest 2K20, conducted by COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online Payments.",
+                "github": "https://github.com/NiketanG/COMeIT_RegistrationApp",
+                "link": "https://bit.ly/technofest2k20",
+                "category": "default"
+            },
+            {
+                "title": "Online Quiz",
+                "desc": "A Quiz System with customisable no. of subjects and questions, random questions for each user, Sessions for tracking attempted quiestions and a leaderboard to view score. Built originally for TechnoFest 2k20.",
+                "github": "https://github.com/NiketanG/TF_Quiz",
+                "link": "http://bit.ly/tf-quiz",
+                "category": "default"
+            },
+            {
+                "title": "1TapHelp",
+                "desc": "Disaster Management System developed as a Project for Smart India Hackathon. [ PRIVATE ]",
+                "category": "default"
+            },
+            {
+                "title": "Online 2 Player Stone-Paper-Scissor",
+                "desc": "Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
+                "github": "https://github.com/NiketanG/stone-paper-scissor-online",
+                "link": "https://bit.ly/stone-paper-scissor",
+                "category": "personal"
+            },
+            {
+                "title": "Online 2 Player Tic-Tac-Toe",
+                "desc": "Online, Tic-Tac-Toe Game that is playable over the internet, between 2 players.",
+                "github": "https://github.com/NiketanG/tic-tac-toe-online",
+                "link": "https://bit.ly/tic-tac-toe-online",
+                "category": "personal"
+            }
+        ]
         $(function () {
             emailjs.init("user_YBW1M72fAfvymWrDJTDrT");
             AOS.init();
@@ -76,13 +76,13 @@
                         $("#messageSubmit").html('<i class="fa fa-times" aria-hidden="true"></i>Failed')
                     });
             });
-            
+
             projects_list.forEach(element => {
-                    $(".projects .content ."+element.category+" .row").append(
-                        '<div class="card" data-aos="fade-down"><h3>'+element.title+'</h3><p>'+element.desc+'</p><div class="links">' + (element.github === undefined ? "" : '<a href="'+element.github+'" class="links" target="_blank"><i class="fa fa-github icon"></i></a>') + (element.link === undefined ? "" : '<a href="'+element.link+'" class="links" target="_blank"><i class="fa fa-globe icon"></i></a></div></div>')
-                    )
+                $(".projects .content ." + element.category + " .row").append(
+                    '<div class="card" data-aos="fade-down"><h3>' + element.title + '</h3><p>' + element.desc + '</p><div class="links">' + (element.github === undefined ? "" : '<a href="' + element.github + '" class="links" target="_blank"><i class="fa fa-github icon"></i></a>') + (element.link === undefined ? "" : '<a href="' + element.link + '" class="links" target="_blank"><i class="fa fa-globe icon"></i></a></div></div>')
+                )
             });
-            
+
         });
     </script>
 </head>
@@ -108,28 +108,27 @@
                 <i class="fa fa-instagram icon"></i>
             </a>
         </div>
-        <p class="down">Scroll Down</p>
+        <p class="down"><a href="#about" style="text-decoration: none;">Scroll Down</a></p>
     </div>
 
-    <div class="section about">
+    <div id="about" class="section about">
         <div class="content" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out">
             <h1>ABOUT ME</h1>
             <p>Heyyy!</p>
             <p>
                 I'm Niketan Gulekar, and as you might have already read, I'm a student, developer - web-developer for
-                the most part. But I can code other things as well.
+                the most part.
             </p>
             <p>
-                With most interest in Full-Stack Web Development, I am proficient in Python. I use Flask Micro-Framework
-                for the most part in buiidlig the backend. But .NET, oh and PHP are some of the other things I can code
-                in.
+                I got into Computers mostly because of playing games on it in the childhood. Then I started with
+                customizing aspects of the GUI, and what started as a simple hobby ended up with an addiction.
             </p>
             <p>
-                For Front-End, I started out with plain HTML and CSS. Although it was more than enough for a 19 year
-                teenager, I know ReactJS as well.
-            </p>
-            <p>
-                Apart from Web-Development, I know Android, Java, C, C++, and of course SQL for them databases.
+                This was made to showcase the things I know and make it easier for the people to connect with me.
+                If you like what you see, head over to the <a href="#contact" style="text-decoration: none;">Contact
+                    Me</a> section below and send me a
+                text, I would
+                love to hear from you!
             </p>
             <p>
                 This website is just an example of one of the things I can do. Don't judge me based on this, and my
@@ -139,7 +138,7 @@
         <!-- <p class="down">Scroll Down</p> -->
     </div>
 
-    <div class="section skills">
+    <div id="skills" class="section skills">
         <div class="content" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-out">
             <h1>SKILLS</h1>
             <div class="container">
@@ -156,6 +155,13 @@
                         <div class="card_text">
                             <h3>Frontend Javascript Frameworks</h3>
                             <p>ReactJS</p>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <img src="/assets/img/nodejs-icon.svg" alt="Python">
+                        <div class="card_text">
+                            <h3>Backend Javascript Frameworks</h3>
+                            <p>Node.js Express.js</p>
                         </div>
                     </div>
                     <div class="card" data-aos="fade-up">
@@ -176,7 +182,7 @@
                         <img src="/assets/img/database.png" alt="Python">
                         <div class="card_text">
                             <h3>Database Management Systems</h3>
-                            <p>MySQL, Postgres, Oracle</p>
+                            <p>MongoDB, MySQL, Postgres, Oracle</p>
                         </div>
                     </div>
                     <div class="card" data-aos="fade-up">
@@ -200,26 +206,26 @@
     </div>
 
 
-    <div class="section projects">
+    <div id="projects" class="section projects">
         <div class="content" data-aos="fade-up" data-aos-duration="1000">
             <h1>PROJECTS</h1>
             <div class="container default">
                 <div class="row">
-                   
+
                 </div>
             </div>
             <br>
             <h3>Personal Projects</h3>
             <div class="container personal">
                 <div class="row">
-                   
+
                 </div>
             </div>
         </div>
         <!-- <p class="down">Scroll Down</p> -->
     </div>
 
-    <div class="section achievements certifications">
+    <div id="achievements" class="section achievements certifications">
         <div class="content" data-aos="fade-in" data-aos-duration="1000">
             <h1>ACHIEVEMENTS</h1>
             <div class="container">
@@ -238,7 +244,8 @@
         <!-- <p class="down">Scroll Down</p> -->
     </div>
 
-    <div class="section contact">
+    <div id="contact" class="section contact">
+        <a></a>
         <div class="content">
             <h1>CONTACT</h1>
             <form action="/" method="post" id="contactForm">
@@ -285,9 +292,6 @@
             .typeString('<strong>Student</strong>')
             .pauseFor(500)
             .deleteAll()
-            .typeString('<strong>Programmer</strong>')
-            .pauseFor(500)
-            .deleteChars(10)
             .typeString('<strong>Web Designer</strong>')
             .pauseFor(500)
             .deleteChars(8)

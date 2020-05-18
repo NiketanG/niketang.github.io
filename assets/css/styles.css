@@ -377,6 +377,11 @@ a {
         padding: 10px;
         height: auto;
     }
+
+    .skills .card {
+        flex: 0 1 calc(50% - 20px);
+        padding: 25px;
+    }
 }
 
 
