@@ -1,455 +1,252 @@
-body{
-    background-color: #282828;
-    margin: 0;
-    color: white;
-    text-align: center;
-    font-weight: 100;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+	background-color: #282828;
+	margin: 0;
+	color: white;
+	text-align: center;
+	font-weight: 100;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    display: table-cell;
-    vertical-align: middle;
+	width: 100vw;
+	height: 100vh;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .profile img.profile {
-    width: 192px;
-    height: 192px;
-    border-radius: 50%;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	width: 192px;
+	height: 192px;
+	border-radius: 50%;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.profile h1#title{
-    font-size: 22px;
+.profile h1#title {
+	font-size: 22px;
 }
 
 .profile #textTypeWriter {
-    text-align:center;
-    color: white;
-    font-weight: 100;
-    font-size: 15px;
-    font-family:'Courier New', Courier, monospace;
+	text-align: center;
+	color: white;
+	font-weight: 100;
+	font-size: 15px;
+	font-family: "Courier New", Courier, monospace;
 }
 
-.icon{
-    background-color: white;
-    padding: 8px;
-    font-size: 14px;
-    margin: 0 4px;
-    border-radius: 50%;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.icon {
+	width: 16px;
+	height: 16px;
+	background-color: white;
+	padding: 10px;
+	margin: 0 4px;
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.icon:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.30);
+.icon:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
-.fa-github {
-    color: #24292E;
+.sendMail {
+	width: 16px;
+	margin: 0 4px 0 0;
 }
-.fa-twitter {
-    color: #1DA1F2
+#heart {
+	color: crimson;
 }
-.fa-instagram {
-    color: #ED4956;
-}
-.fa-linkedin {
-    color: #2977C9;
-}
-.fa-heart {
-    color:crimson;
-}
-.fa-globe {
-    color: #24292E;
-}
-
-.down, .end #up {
-    font-size: 12px;
-    width: 100%;
-    margin-top: -30px;
-    text-align: center;
-    animation-name: bounce;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+.down,
+.end #up {
+	font-size: 12px;
+	width: 100%;
+	margin-top: -30px;
+	text-align: center;
+	animation-name: bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .end #up {
-    margin-top: 60px;
-    margin-bottom: -60px;
+	margin-top: 60px;
+	margin-bottom: -60px;
 }
 
 @keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    50% {
-        transform: translateY(-30px);
-    }
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
 }
 
 .section h1:not(#title) {
-    letter-spacing: 10px;
-    font-weight: 500;
-    font-size: 24px;
+	letter-spacing: 10px;
+	font-weight: 500;
+	font-size: 24px;
 }
 
-.section p:not(.down){
-    width: 80%;
-    margin: 15px auto;
-    line-height: 25px;
-    text-align: justify;
-    font-size: 14px;
+.section p:not(.down) {
+	width: 80%;
+	margin: 15px auto;
+	line-height: 25px;
+	text-align: justify;
+	font-size: 14px;
 }
 
-.links{
-    text-decoration: none;
+.links {
+	text-decoration: none;
 }
 .container {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 50px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
 
+.card {
+	padding: 25px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	flex: 0 1 calc(100% - 20px);
+	margin-top: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	transition: 0.2s ease-in-out !important;
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.card{
-    padding: 25px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    flex: 0 1 calc(100% - 20px);
-    margin-top: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    transition: 0.2s ease-in-out !important;
-}
-.card:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.30);
+.card:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 .section .card p {
-    width: calc(100% - 20px);
-    font-size: 13px;
-    text-align: center;
+	width: calc(100% - 20px);
+	font-size: 13px;
+	text-align: center;
 }
 
 .skills {
-    margin-top: 100px;
+	margin-top: 100px;
 }
 
 .skills .card {
-    padding: 20px 0px;
-    display: flex;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center; 
+	padding: 20px 0px;
+	display: flex;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
 }
 .skills img {
-    margin: 0px 20px;
-    width: 22px;
-    float: left;
+	margin: 0px 20px;
+	width: 22px;
+	float: left;
 }
 
-.skills .card .card_text{
-    width: calc(100%);
-    margin: 0px 20px 0px 0px;
-    display: inline-block;    
+.skills .card .card_text {
+	width: calc(100%);
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
 }
 
-.skills .card .card_text h3, .skills .card .card_text p{
-    margin: 0px 0px;
-    text-align: left;
-    font-size: 13px;
+.skills .card .card_text h3,
+.skills .card .card_text p {
+	margin: 0px 0px;
+	text-align: left;
+	font-size: 13px;
 }
 .achievements .card {
-    padding: 25px 25px;
+	padding: 25px 25px;
 }
 
-.achievements h3, .achievements p {
-    margin: 0px auto !important;
-    text-align: center !important;
+.achievements h3,
+.achievements p {
+	margin: 0px auto !important;
+	text-align: center !important;
 }
-
 
 .contact form {
-    width: 80%;
-    text-align: left;
-    margin: 0 auto;
+	width: 80%;
+	text-align: left;
+	margin: 0 auto;
 }
 
 label {
-    margin: 5px auto;
-    margin-top: 20px;
-    text-align: left;
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+	margin: 5px auto;
+	margin-top: 20px;
+	text-align: left;
+	display: block;
+	font: 1rem "Fira Sans", sans-serif;
 }
 
-input, textarea{
-    box-sizing: border-box;
-    width: 100%;
-    margin: 5px 0px !important;
-    background-color: transparent;
-    border: 1px solid gray;
-    height: 30px;
-    padding: 0px 10px;
-    color: white;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+input,
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 5px 0px !important;
+	background-color: transparent;
+	border: 1px solid gray;
+	height: 30px;
+	padding: 0px 10px;
+	color: white;
+	transition: 0.3s ease-in-out;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 textarea {
-    padding: 10px;
-    height: auto;
+	padding: 10px;
+	height: auto;
 }
 
-input:focus, textarea:focus{
-    border: 1px solid white;
-    outline: none;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.30);
-    transition: 0.3s ea;
+input:focus,
+textarea:focus {
+	border: 1px solid white;
+	outline: none;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
+	transition: 0.3s ea;
 }
 
-button[type=submit] {
-    border: none;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    width: 150px;
-    height: 35px;
-    transition: 0.3s ease-in-out;
-    margin: 15px calc(50% - 75px) !important;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+button[type="submit"] {
+	border: none;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	width: 150px;
+	height: 35px;
+	transition: 0.3s ease-in-out;
+	margin: 15px calc(50% - 75px) !important;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-button[type=submit]:focus{
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.30);
+button[type="submit"]:focus {
+	border: 1px solid white;
+	background-color: transparent;
+	color: white;
+	outline: none;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.fa-paper-plane, .fa-check, .fa-times {
-    margin-right: 10px;
+.fa-paper-plane,
+.fa-check,
+.fa-times {
+	margin-right: 10px;
 }
 
 a {
-    color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.6);
 }
 
-.end .content p{
-    text-align: center;
-    margin: 0 auto;
+.end .content p {
+	text-align: center;
+	margin: 0 auto;
 }
-
-
-@media only screen and (min-width: 600px) {
-    .profile img.profile {
-        width: 228px;
-        height: 228px;
-    }
-    .profile h1#title{
-        font-size: 24px;
-    }
-    .profile #textTypeWriter {
-        font-size: 16px;
-    }
-    .down, .end #up {
-        font-size: 14px;
-    }
-    .section p:not(.down){
-        font-size: 16px;
-    }
-    .container {
-        width: 80%;
-    }
-    .card h3 ,.section .card p, .skills .card .card_text h3, .skills .card .card_text p{
-        font-size: 14px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .profile img.profile {
-        width: 256px;
-        height: 256px;
-    }
-    .profile h1#title{
-        font-size: 26px;
-    }
-    .profile #textTypeWriter {
-        font-size: 18px;
-    }
-    .icon {
-        font-size: 15px;
-        padding: 10px;
-    }
-    
-    .down, .end #up {
-        font-size: 16px;
-    }
-
-    .section h1:not(#title) {
-        font-size: 26px;
-        margin-bottom: 50px !important;
-    }
-
-    .section p:not(.down){
-        width: 60%;
-        margin: 25px auto;
-        font-size: 18px;
-    }
-
-    .section .card p {
-        width: calc(100% - 20px);
-    }
-
-    .container {
-        width: 60%;
-    }
-    .card h3 ,.section .card p, .skills .card .card_text h3, .skills .card .card_text p{
-        font-size: 16px;
-    }
-    .contact form {
-        width: 60%;
-    }
-
-    label {
-        font-size: 16px;
-    }
-
-    input, textarea{
-        height: 40px;
-        font-size: 14px;
-    }
-
-    textarea {
-        padding: 10px;
-        height: auto;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-
-    .section p:not(.down){
-        width: 60%;
-        margin: 25px auto;
-        font-size: 18px;
-    }
-    .container {
-        width: 60%;
-    }
-    .contact form {
-        width: 40%;
-    }
-
-    .card {
-        flex: 0 1 calc(50% - 20px);
-    }
-    
-    .section .card p {
-        width: calc(100% - 20px);
-    }
-
-    label {
-        font-size: 16px;
-    }
-
-    input, textarea{
-        height: 40px;
-        font-size: 14px;
-    }
-
-    textarea {
-        padding: 10px;
-        height: auto;
-    }
-
-    .skills .card {
-        flex: 0 1 calc(50% - 20px);
-        padding: 25px;
-    }
-}
-
-
-@media only screen and (min-width: 1500px) {
-    .profile img.profile {
-        width: 264px;
-        height: 264px;
-    }
-    .profile h1#title{
-        font-size: 28px;
-    }
-    .profile #textTypeWriter {
-        font-size: 18px;
-    }
-    .icon {
-        font-size: 18px;
-        padding: 12px;
-    }
-    .section h1:not(#title) {
-        font-size: 28px;
-    }
-    .section p:not(.down){
-        width: 40%;
-        margin: 25px auto;
-        font-size: 19px;
-
-    }
-    .container {
-        width: 50%;
-    }
-    .contact form {
-        width: 30%;
-    }
-    .card {
-        flex: 0 1 calc(33% - 20px);
-    }
-    .projects .card {
-        flex: 0 1 calc(50% - 20px);
-        padding: 25px;
-    }
-    .section .card p {
-        width: calc(100% - 25px);
-    }
-    .card h3 {
-        font-size: 20px;
-    }
-
-    .section .card p {
-        font-size: 18px;
-    }
-
-    .achievements .card {
-        padding: 25px 0px;
-        flex: 0 1 calc(50% - 20px);
-    }
-
-    label {
-        font-size: 16px;
-    }
-
-    input, textarea{
-        height: 40px;
-        font-size: 14px;
-    }
-
-    textarea {
-        padding: 10px;
-        height: auto;
-    }
-}
-
