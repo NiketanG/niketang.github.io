@@ -30,7 +30,8 @@
 		{
 			"src": "assets/img/icons/logo_192.png",
 			"sizes": "192x192",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable any"
 		},
 		{
 			"src": "assets/img/icons/logo_384.png",

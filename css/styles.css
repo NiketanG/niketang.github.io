@@ -49,9 +49,17 @@ body {
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 .sendMail {
+	margin-right: 4px;
 	width: 16px;
-	margin: 0 4px 0 0;
 }
+
+#messageSubmit {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
 #heart {
 	color: crimson;
 }
@@ -169,7 +177,7 @@ body {
 	padding: 25px 25px;
 }
 
-.achievements h3,
+.achievements h4,
 .achievements p {
 	margin: 0px auto !important;
 	text-align: center !important;
@@ -236,14 +244,9 @@ button[type="submit"]:focus {
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.fa-paper-plane,
-.fa-check,
-.fa-times {
-	margin-right: 10px;
-}
-
 a {
-	color: rgba(255, 255, 255, 0.6);
+	color: lightgray;
+	text-decoration: none;
 }
 
 .end .content p {
