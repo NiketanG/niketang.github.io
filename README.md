@@ -1,6 +1,9 @@
 # Personal Portfolio Website
 
-Link : [Link](https://niketang.github.io/)
+Hosted on Github Pages
+[Link](https://niketang.github.io/)
+
+
 
 ###### Libraries Used :
 
@@ -15,3 +18,7 @@ Link : [Link](https://niketang.github.io/)
 [Android by Pixel perfect](https://www.flaticon.com/authors/pixel-perfect)<br/>
 [Web Server by Pixel perfect](https://www.flaticon.com/authors/pixel-perfect)<br/>
 [Database by Smashicons](https://www.flaticon.com/authors/smashicons)
+
+
+##### Extras: 
+Lighthouse Audit on every deploy using Github Actions
