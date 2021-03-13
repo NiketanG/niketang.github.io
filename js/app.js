@@ -1,11 +1,12 @@
-AOS.init({
-	once: true,
-});
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
 		navigator.serviceWorker.register("../sw.js").then(() => {});
 	});
 }
+
+AOS.init({
+	once: true,
+});
 
 const projects_list = [
 	{
@@ -87,8 +88,6 @@ const projects_list = [
 	},
 ];
 
-emailjs.init("user_YBW1M72fAfvymWrDJTDrT");
-AOS.init();
 document.querySelector("#contactForm").addEventListener("submit", function (e) {
 	e.preventDefault();
 	var name = document
@@ -124,7 +123,7 @@ projects_list.forEach((element) => {
 		.querySelector(".projects .content ." + element.category + " .row")
 		.insertAdjacentHTML(
 			"afterend",
-			'<div class="card" data-aos="fade-down"><h3>' +
+			'<div class="card projectCard" data-aos="fade-down"><h3>' +
 				element.title +
 				"</h3><p>" +
 				element.desc +
@@ -133,12 +132,12 @@ projects_list.forEach((element) => {
 					? ""
 					: '<a href="' +
 					  element.github +
-					  '" class="links" target="_blank" rel="noreferrer"><img alt="Github Repository" class="icon" width="64px" height="64px" src="../assets/img/github.png" /></a>') +
+					  '" class="links" target="_blank" rel="noreferrer"><img alt="Github Repository" class="icon" width="16px" height="16px" src="./assets/img/github.png" /></a>') +
 				(element.link === undefined
 					? ""
 					: '<a href="' +
 					  element.link +
-					  '" class="links" target="_blank" rel="noreferrer"><img alt="Demo Link" width="64px" height="64px" class="icon" src="../assets/img/globe.png" /></a></div></div>')
+					  '" class="links" target="_blank" rel="noreferrer"><img alt="Demo Link" width="16px" height="16px" class="icon" src="./assets/img/globe.png" /></a></div></div>')
 		);
 });
 
