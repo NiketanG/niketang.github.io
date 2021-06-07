@@ -8,11 +8,29 @@ AOS.init({
 	once: true,
 });
 
-const projects_list = [
+const projectsList = [
+	{
+		title: "1TapHelp",
+		desc: "Disaster Management System developed as a Project for Smart India Hackathon. Winner of SIH 2020. \n [ PRIVATE ]",
+		category: "default",
+	},
+	{
+		title: "Shipper",
+		desc: "Traffic Management and Navigation for Coastal Regions. Developed for ASEAN-INDIA Hackathon 2021 and won Encouragement Award.",
+		category: "default",
+		github: "https://github.com/NiketanG/Shipper",
+		link: "https://shipper-web.netlify.app/",
+	},
+	{
+		title: "Shipper-ML",
+		desc: "Object Recognition API for identifying Ships from Satellite Imagery. Used in Shipper, for ASEAN-INDIA Hackathon 2021.",
+		category: "default",
+		github: "https://github.com/NiketanG/Shipper-ml",
+		link: "http://nikketan.pythonanywhere.com/",
+	},
 	{
 		title: "noobx - Portfolio Website",
-		desc:
-			"Portfolio Website for Gaurav Popalghat (noobx). Built with Next.js, TailwindCSS & Sanity.io.",
+		desc: "Portfolio Website for Gaurav Popalghat (noobx). Built with Next.js, TailwindCSS & Sanity.io.",
 
 		link: "https://noobx.in",
 		category: "default",
@@ -26,62 +44,50 @@ const projects_list = [
 	},
 	{
 		title: "TechnoFest 2k20 Registration Website",
-		desc:
-			"A Registration Website for online registration of TechnoFest 2K20, conducted by COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online Payments.",
+		desc: "A Registration Website for online registration of TechnoFest 2K20, conducted by COMeIT in Government Polytechnic, Pune. Includes Payment Gateway for Online Payments.",
 		github: "https://github.com/NiketanG/COMeIT_RegistrationApp",
 		link: "https://bit.ly/technofest2k20",
 		category: "default",
 	},
 	{
 		title: "Online Quiz",
-		desc:
-			"A Quiz System with customisable no. of subjects and questions, random questions for each user, Sessions for tracking attempted quiestions and a leaderboard to view score. Built originally for TechnoFest 2k20.",
+		desc: "A Quiz System with customisable no. of subjects and questions, random questions for each user, Sessions for tracking attempted quiestions and a leaderboard to view score. Built originally for TechnoFest 2k20.",
 		github: "https://github.com/NiketanG/TF_Quiz",
 		link: "http://bit.ly/tf-quiz",
 		category: "default",
 	},
-	{
-		title: "1TapHelp",
-		desc:
-			"Disaster Management System developed as a Project for Smart India Hackathon. Winner of SIH 2020.[ PRIVATE ]",
-		category: "default",
-	},
-	{
-		title: "Sensei",
-		desc:
-			"Use your Smartphone as a Laser Pointer for your laptop., using the new Generic Sensor API.",
-		github: "https://github.com/NiketanG/Sensei",
-		link: "https://sensei-remote.herokuapp.com/",
-		category: "personal",
-	},
+
 	{
 		title: "Shortr",
-		desc:
-			"Open-source URL Shortening Service with support for Custom Short Urls & Granular Statistics.",
+		desc: "Open-source URL Shortening Service with support for Custom Short Urls & Granular Statistics.",
 		github: "https://github.com/NiketanG/Shortr",
-		link: "https://shor-tr.glitch.me/",
+		link: "http://sh-rtr.herokuapp.com/",
 		category: "personal",
 	},
 	{
 		title: "Online 2 Player Stone-Paper-Scissor",
-		desc:
-			"Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
+		desc: "Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
 		github: "https://github.com/NiketanG/stone-paper-scissor-online",
 		link: "https://bit.ly/stone-paper-scissor",
 		category: "personal",
 	},
 	{
 		title: "Online 2 Player Tic-Tac-Toe",
-		desc:
-			"Online, Tic-Tac-Toe Game that is playable over the internet, between 2 players.",
+		desc: "Online, Tic-Tac-Toe Game that is playable over the internet, between 2 players.",
 		github: "https://github.com/NiketanG/tic-tac-toe-online",
 		link: "https://bit.ly/tic-tac-toe-online",
 		category: "personal",
 	},
 	{
+		title: "Sensei",
+		desc: "Use your Smartphone as a Laser Pointer for your laptop., using the new Generic Sensor API.",
+		github: "https://github.com/NiketanG/Sensei",
+		link: "https://sensei-remote.herokuapp.com/",
+		category: "personal",
+	},
+	{
 		title: "ToDo App",
-		desc:
-			"A Serverless, Synced ToDo App, Built using Firebase Cloud Functions, Frontend using React Material UI.",
+		desc: "A Serverless, Synced ToDo App, Built using Firebase Cloud Functions, Frontend using React Material UI.",
 		github: "https://github.com/NiketanG/ToDoApp",
 		link: "https://todoapp-7ee2e.firebaseapp.com/",
 		category: "personal",
@@ -108,7 +114,6 @@ document.querySelector("#contactForm").addEventListener("submit", function (e) {
 
 	emailjs.send("gmail", "template_06EQuuhx", templateParams).then(
 		function (response) {
-			console.log("SUCCESS!", response.status, response.text);
 			document.querySelector("#messageSubmit").innerHTML = "✔️ Sent";
 		},
 		function (error) {
@@ -118,27 +123,34 @@ document.querySelector("#contactForm").addEventListener("submit", function (e) {
 	);
 });
 
-projects_list.forEach((element) => {
+function htmlToElement(html) {
+	var template = document.createElement("template");
+	html = html.trim(); // Never return a text node of whitespace as the result
+	template.innerHTML = html;
+	return template.content.firstChild;
+}
+
+projectsList.map((project) => {
+	const newProject = htmlToElement(
+		'<div class="card projectCard" data-aos="fade-down"><h3>' +
+			project.title +
+			"</h3><p>" +
+			project.desc +
+			'</p><div class="links">' +
+			(project.github === undefined
+				? ""
+				: '<a href="' +
+				  project.github +
+				  '" class="links" target="_blank" rel="noreferrer"><img alt="Github Repository" class="icon" width="16px" height="16px" src="./assets/img/github.png" /></a>') +
+			(project.link === undefined
+				? ""
+				: '<a href="' +
+				  project.link +
+				  '" class="links" target="_blank" rel="noreferrer"><img alt="Demo Link" width="16px" height="16px" class="icon" src="./assets/img/globe.png" /></a></div></div>')
+	);
 	document
-		.querySelector(".projects .content ." + element.category + " .row")
-		.insertAdjacentHTML(
-			"afterend",
-			'<div class="card projectCard" data-aos="fade-down"><h3>' +
-				element.title +
-				"</h3><p>" +
-				element.desc +
-				'</p><div class="links">' +
-				(element.github === undefined
-					? ""
-					: '<a href="' +
-					  element.github +
-					  '" class="links" target="_blank" rel="noreferrer"><img alt="Github Repository" class="icon" width="16px" height="16px" src="./assets/img/github.png" /></a>') +
-				(element.link === undefined
-					? ""
-					: '<a href="' +
-					  element.link +
-					  '" class="links" target="_blank" rel="noreferrer"><img alt="Demo Link" width="16px" height="16px" class="icon" src="./assets/img/globe.png" /></a></div></div>')
-		);
+		.querySelector(".projects .content ." + project.category + " .row")
+		.appendChild(newProject);
 });
 
 var title = document.getElementById("textTypeWriter");
