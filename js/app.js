@@ -113,7 +113,7 @@ document.querySelector("#contactForm").addEventListener("submit", function (e) {
 	};
 
 	emailjs.send("gmail", "template_06EQuuhx", templateParams).then(
-		function (response) {
+		function () {
 			document.querySelector("#messageSubmit").innerHTML = "✔️ Sent";
 		},
 		function (error) {
@@ -141,12 +141,16 @@ projectsList.map((project) => {
 				? ""
 				: '<a href="' +
 				  project.github +
-				  '" class="links" target="_blank" rel="noreferrer"><img alt="Github Repository" class="icon" width="16px" height="16px" src="./assets/img/github.png" /></a>') +
+				  '" class="links" target="_blank" rel="noreferrer" data-splitbee-event="Project Source Code" data-splitbee-event-type="' +
+				  project.title +
+				  '"><img alt="Github Repository" class="icon" width="16px" height="16px" src="./assets/img/github.png" /></a>') +
 			(project.link === undefined
 				? ""
 				: '<a href="' +
 				  project.link +
-				  '" class="links" target="_blank" rel="noreferrer"><img alt="Demo Link" width="16px" height="16px" class="icon" src="./assets/img/globe.png" /></a></div></div>')
+				  '" class="links" target="_blank" rel="noreferrer" data-splitbee-event="Project Demo" data-splitbee-event-type="' +
+				  project.title +
+				  '"><img alt="Demo Link" width="16px" height="16px" class="icon" src="./assets/img/globe.png" /></a></div></div>')
 	);
 	document
 		.querySelector(".projects .content ." + project.category + " .row")
