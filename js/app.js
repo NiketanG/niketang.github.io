@@ -130,7 +130,7 @@ function htmlToElement(html) {
 	return template.content.firstChild;
 }
 
-projectsList.map((project) => {
+projectsList.forEach((project) => {
 	const newProject = htmlToElement(
 		'<div class="card projectCard" data-aos="fade-down"><h3>' +
 			project.title +
