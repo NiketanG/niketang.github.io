@@ -3,18 +3,20 @@ name: Performance Audit
 on: [pull_request, push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli
-          lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=./
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN}}
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: Install Lighthouse CI Node Package
+              run: |
+                  npm install -g @lhci/cli
+            - name: Run Lighthouse CI
+              run: |
+                  lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=./
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN}}

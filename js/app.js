@@ -38,8 +38,19 @@ const projectsList = [
 	{
 		title: "Patronus Interiors Website",
 		desc: "Website for Patronus Interiors, Pune. Built with Next.js.",
-
 		link: "https://patronusinteriors.com",
+		category: "default",
+	},
+	{
+		title: "Crypto11",
+		desc: "A fantasy sports platform for Cryptocurrencies.",
+		link: "https://crypto11.co",
+		category: "default",
+	},
+	{
+		title: "Chessverst",
+		desc: "A social media platform dedicated to Chess Enthusiast. Features custom competitions, blogs, news and posts, with user follower-following.",
+		link: "https://chessverst.com/",
 		category: "default",
 	},
 	{
