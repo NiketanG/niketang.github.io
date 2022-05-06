@@ -222,3 +222,9 @@ var typewriter7 = new Typewriter(end, {
 	loop: true,
 });
 typewriter7.typeString("ABOUT").pauseFor(1000).deleteAll().start();
+
+var experience = document.querySelector(".experience .content h1");
+var typewriter4 = new Typewriter(experience, {
+	loop: true,
+});
+typewriter4.typeString("EXPERIENCE").pauseFor(1000).deleteAll().start();

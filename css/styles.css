@@ -253,3 +253,8 @@ a {
 	text-align: center;
 	margin: 0 auto;
 }
+
+.text-light {
+	margin-top: -2px !important;
+	opacity: 0.6;
+}
