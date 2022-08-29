@@ -41,12 +41,12 @@ const projectsList = [
 		link: "https://patronusinteriors.com",
 		category: "default",
 	},
-	{
-		title: "Crypto11",
-		desc: "A fantasy sports platform for Cryptocurrencies.",
-		link: "https://crypto11.co",
-		category: "default",
-	},
+	// {
+	// 	title: "Crypto11",
+	// 	desc: "A fantasy sports platform for Cryptocurrencies.",
+	// 	link: "https://crypto11.co",
+	// 	category: "default",
+	// },
 	{
 		title: "Chessverst",
 		desc: "A social media platform dedicated to Chess Enthusiast. Features custom competitions, blogs, news and posts, with user follower-following.",
