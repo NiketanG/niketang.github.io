@@ -79,7 +79,7 @@ const projectsList = [
 		title: "Online 2 Player Stone-Paper-Scissor",
 		desc: "Online, Stone-Paper-Scissor Game that is playable over the internet, between 2 players.",
 		github: "https://github.com/NiketanG/stone-paper-scissor-online",
-		link: "https://bit.ly/stone-paper-scissor",
+		link: "https://stone-paper-scissor.fly.dev/",
 		category: "personal",
 	},
 	{
@@ -107,15 +107,9 @@ const projectsList = [
 
 document.querySelector("#contactForm").addEventListener("submit", function (e) {
 	e.preventDefault();
-	var name = document
-		.querySelector("#contactForm")
-		.getElementsByTagName("input")[0].value;
-	var email = document
-		.querySelector("#contactForm")
-		.getElementsByTagName("input")[1].value;
-	var message = document
-		.querySelector("#contactForm")
-		.getElementsByTagName("textarea")[0].value;
+	var name = document.querySelector("#contactForm").getElementsByTagName("input")[0].value;
+	var email = document.querySelector("#contactForm").getElementsByTagName("input")[1].value;
+	var message = document.querySelector("#contactForm").getElementsByTagName("textarea")[0].value;
 
 	var templateParams = {
 		from_name: name,
