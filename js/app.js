@@ -72,7 +72,7 @@ const projectsList = [
 		title: "Shortr",
 		desc: "Open-source URL Shortening Service with support for Custom Short Urls & Granular Statistics.",
 		github: "https://github.com/NiketanG/Shortr",
-		link: "http://sh-rtr.herokuapp.com/",
+		link: "https://shortrr.vercel.app/",
 		category: "personal",
 	},
 	{
